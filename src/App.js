@@ -3,10 +3,7 @@ import React from 'react';
 import Header from './Header/header';
 import Rate from './Rate/rate';
 import Footer from './Footer/footer';
-
-
 import './App.css';
-
 function App() {
     return (
         <div className='App'>
