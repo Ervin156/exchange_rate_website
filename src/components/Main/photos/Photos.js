@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Photos.scss';
+
 
 import { BASE_URL_PHOTO, CLIENT_ID } from "../../settings/settings";
 
@@ -21,21 +23,28 @@ class Photos extends React.Component {
             })
     };
     renderPhoto = (data) => {
-        let li = document.createElement('li');
-        let c = document.querySelector('#img-container');
+        let containerImg = document.querySelector('#img-container');
+        let ul = document.createElement('ul');
+
         for (let i of data) {
+            let li = document.createElement('li');
+
             let img = document.createElement('img');
             img.src = i.urls.thumb;
-            li.append(img)
+            // li.appendChild(img)
+            // ul.appendChild(li)
+            containerImg.appendChild(img);
         }
-        c.appendChild(li)
-        // console.log(c)
+        // containerImg.appendChild(ul);
+        
     };
     render() {
         return (
-            <div className='photos'>
-                <h1>Photos page</h1>
-                <div id='img-container'></div>
+            <div className='container'>
+                <div className='photos'>
+                    <h1>Photos page</h1>
+                    <div id='img-container'></div>
+                </div>
             </div>
         )
     }
