@@ -1,7 +1,7 @@
 import React from 'react';
 
-import './header.scss';
-import Nav from '../Nav/nav';
+import './Header.scss';
+import Nav from '../Nav/Nav';
 
 class Header extends React.Component {
     render() {

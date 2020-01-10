@@ -1,7 +1,7 @@
 import React from 'react';
-import { BASE_URL } from './settings';
+import { BASE_URL } from '../../settings/settings';
 
-import './rate.scss';
+import './Rate.scss';
 
 class Rate extends React.Component {
     constructor(props) {
