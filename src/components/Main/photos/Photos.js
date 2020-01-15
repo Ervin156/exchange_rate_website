@@ -23,19 +23,19 @@ class Photos extends React.Component {
             })
     };
     renderPhoto = (data) => {
-        let containerImg = document.querySelector('#img-container');
-        let ul = document.createElement('ul');
+        let containerImg = document.querySelector('.img-container');
+        
 
         for (let i of data) {
             let li = document.createElement('li');
 
             let img = document.createElement('img');
             img.src = i.urls.thumb;
-            // li.appendChild(img)
-            // ul.appendChild(li)
-            containerImg.appendChild(img);
+            li.appendChild(img)
+           
+            containerImg.appendChild(li);
+
         }
-        // containerImg.appendChild(ul);
         
     };
     render() {
@@ -43,7 +43,7 @@ class Photos extends React.Component {
             <div className='container'>
                 <div className='photos'>
                     <h1>Photos page</h1>
-                    <div id='img-container'></div>
+                    <div className='img-container'></div>
                 </div>
             </div>
         )

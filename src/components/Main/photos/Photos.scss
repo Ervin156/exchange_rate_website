@@ -1,14 +1,17 @@
 .photos{
     margin: 20px;
-    // li{
-    //     list-style: none;
-    // }
+    li{
+        list-style: none;
+    }
     h1{
         color: red;
     }
-    #img-container{
+    .img-container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
        img {
-           margin: 2px;
+           margin: 10px;
            height: 150px;
            width: 150px;
            border: 1px solid gray;

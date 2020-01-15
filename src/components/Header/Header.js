@@ -8,7 +8,6 @@ class Header extends React.Component {
         return (
 
             <header>
-                <div className="top-bar animate-drop-down"></div>
                 <div className="main-header">
                     <div className="container">
                         <h1 className="site-title">React Lite Level</h1>

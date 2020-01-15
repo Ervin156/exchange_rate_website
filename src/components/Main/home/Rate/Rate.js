@@ -1,7 +1,9 @@
 import React from 'react';
-import { BASE_URL } from '../../settings/settings';
+import Calculator from '../Calculator/Calculator';
+import { BASE_URL } from '../../../settings/settings';
 
 import './Rate.scss';
+
 
 class Rate extends React.Component {
     constructor(props) {
@@ -46,6 +48,7 @@ class Rate extends React.Component {
                         </div>
                     ))}
                 </div>
+                <Calculator rate={this.state.currecyRate}/>
             </div>
         )
     }

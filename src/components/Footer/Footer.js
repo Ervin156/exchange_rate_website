@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from 'react-router-dom';
 import "./Footer.scss";
 
 class Footer extends React.Component {
@@ -21,9 +22,7 @@ class Footer extends React.Component {
                   <div className="module-body">
                     <ul className="list-unstyled">
                       <li>
-                        <a href="/contacts/" tooltip="Контакты">
-                          Контакты
-                        </a>
+                        <NavLink to="/contacts" tooltip="Контакты">Контакты</NavLink>
                       </li>
                       <li>
                         <a href="/d">Гарантии</a>
@@ -44,7 +43,7 @@ class Footer extends React.Component {
             </div>
           </div>
           <div className="copyright-bar">
-            <div className="flex-container">
+            {/* <div className="flex-container">
               <div className="flex-item">
                 <ul className="link" />
               </div>
@@ -61,7 +60,7 @@ class Footer extends React.Component {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </footer>
       </div>
