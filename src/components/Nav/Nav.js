@@ -15,7 +15,7 @@ class Nav extends React.Component {
                             <ul>
                             
                                 <li><NavLink to="/">Главная</NavLink></li>
-                                <li><NavLink to="/main">Главная_2</NavLink></li>
+                                <li><NavLink to="/main">Курс гривны</NavLink></li>
                                 <li><NavLink to="/points">Пункты обмена</NavLink></li>
                                 <li><NavLink to="/photos">Фоточки</NavLink></li>
                                 <li><NavLink to="/contacts">Контакты</NavLink></li>

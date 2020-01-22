@@ -5,53 +5,38 @@ import './main.scss';
 class PrivatAPI extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            'currecyRate': {
-            },
-        }
-        this.currency = ['Валюта обмена', 'Основная валюта', 'Покупка', 'Продажа'];
         this.getRequest();
     }
     getRequest = () => {
         const URL = ' https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5';
+        // const URL = ' https://www.live-rates.com/rates';
         fetch(URL)
             .then(response => {
                 return response.json();
             })
             .then(data => {
-                // let result = {}
-                let container = document.querySelector('.flex-container')
-
-                for (let item of data) {
-                    const { ...spread } = item;
-                    let block = document.createElement('div');
-                    block.classList.add('flex-item');
-                    let currencyName = document.createElement('p');
-                    currencyName.className = 'currency-name';
-                    let currencyIn = document.createElement('p');
-                    currencyIn.className = "currency-in";
-                    let currencyOut = document.createElement('p');
-                    currencyOut.className = "currency-out";
-                    let box = document.createElement('div');
-                    box.className = 'rate-box';
-
-                    currencyName.innerHTML += spread.ccy;
-                    currencyIn.innerHTML += `<b>Покупка</b> \t${spread.buy}`;
-                    currencyOut.innerHTML += `<b>Продажа</b> \t${spread.sale}`;
-                    box.append(currencyName, currencyIn, currencyOut);
-
-                    block.append(box);
-                    container.appendChild(block)
-
-                }
-                // for (let itemObj in this.currency) {
-                //     result[this.currency[itemObj]] = data.itemObj;
-                //     this.setState({ currecyRate: result })
-                // }
+                this.createBlock(data)
             })
+        this.createBlock = (data) => {
+            const container = document.querySelector('.flex-container');
+            data.map(index => {
+                const blockRate = document.createElement('div');
+                blockRate.className = 'block flex-item';
+                const currecyRate = document.createElement('div');
+                currecyRate.className = 'currency-name';
+                const sale = document.createElement('li');
+                const buy = document.createElement('li');
+                const { ...spread } = index;
+                this.setState({ currecyRate: index })
+                currecyRate.innerHTML += spread.ccy;
+                sale.innerHTML += `<b>Продажа</b> <br><br>${spread.sale} \t <b>${spread.base_ccy}</b>`;
+                buy.innerHTML += `<b>Покупка</b> <br><br>\t${spread.buy} \t<b>${spread.base_ccy}</b>`;
+                blockRate.append(currecyRate, sale, buy)
+                container.append(blockRate)
+            })
+        }
     }
     render() {
-        console.log(this.state.currecyRate)
         return (
             <div className='privat-api'>
                 <h1>PrivatAPI page</h1>
@@ -63,7 +48,6 @@ class PrivatAPI extends React.Component {
                     </main>
                 </div>
             </div>
-
         )
     }
 }

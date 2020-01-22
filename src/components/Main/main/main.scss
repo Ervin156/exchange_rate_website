@@ -6,37 +6,28 @@
   background: #ededed;
   margin: 20px;
 }
-
 .block div {
   margin-bottom: 20px;
 }
-
 .block .currency-in,
 .block .currency-out {
   font-size: 1.3rem;
   text-align: right;
 }
-
 .currency-name {
-  // font-family: 'Oswald';
   font-size: 1.3rem;
   font-weight: bold;
 }
-.rate-box {
-  padding: 20px;
-  height: auto;
-  width: 200px;
-  border: 1px solid gray;
-  p {
-    margin: 10px;
-    display: flex;
-    justify-content: space-between;
+.flex-item {
+  li {
+    list-style: none;
+    margin: 5px;
+    text-align: right;
+    b{
+      margin-left: 15px;
+    }
   }
-}
-#flex-item {
-  display: flex;
-  //   justify-content: center;
-  justify-content: space-between;
-
-  //   flex-direction: row;
+  li:last-child{
+    margin-top: 20px;
+  } 
 }
