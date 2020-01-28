@@ -7,7 +7,6 @@ class Points extends React.Component {
         return (
             <div className='points'>
                 <h1>Points page</h1>
-
             </div>
         )
     }

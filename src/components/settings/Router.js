@@ -3,24 +3,24 @@ import { Switch, Route } from 'react-router-dom';
 
 
 import Contacts from "../Main/contacts/Contacts";
-import Home from "../Main/home/Home";
+import RateUSD from "../Main/rateUSD/RateUSD";
 import Points from "../Main/exchange_points/Points";
 import Photos from "../Main/photos/Photos";
-import PrivatAPI from '../Main/main/main';
+import RateUAH from '../Main/rateUAH/RateUAH';
+// import Weather from "../Main/weather/Weather";
 
 
 class Router extends React.Component {
-    // constructor(props) {
-    //     super(props)
-    // }
+
     render() {
         return (
             <Switch>
-                <Route exact path='/' component={Home} />
-                <Route path="/main" component={PrivatAPI}/>
+                <Route exact path='/' component={RateUSD} />
+                <Route path='/rateUAH' component={RateUAH}/>
                 <Route path='/contacts' component={Contacts} />
                 <Route path='/photos' component={Photos} />
                 <Route path='/points' component={Points} />
+                {/* <Route path='/weather' component={Weather} /> */}
 
             </Switch >
         )

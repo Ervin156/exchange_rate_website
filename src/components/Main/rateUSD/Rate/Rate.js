@@ -1,6 +1,7 @@
 import React from 'react';
 import Calculator from '../Calculator/Calculator';
 import { BASE_URL } from '../../../settings/settings';
+import Weather from '../../weather/Weather';
 
 import './Rate.scss';
 
@@ -37,9 +38,12 @@ class Rate extends React.Component {
     render() {
         return (
             <div className='rate'>
-                <h3>Курс валют на {this.state.date} г.</h3>
+                <div className='rate-header'>
+                    <h3>Курс валют на {this.state.date} г.</h3>
+                    <Weather/>
+                </div>
                 <div className="flex-container">
-                    {Object.keys(this.state.currecyRate).map((keyName, i) => (
+                    {Object.keys(this.state.currecyRate).map((keyName) => (
                         <div className="block flex-item" key={keyName}>
                             {/* для предотвращения ошибки => "Warning: Each child in a list should have a unique "key" prop" указать уникальный ключ key={keyName}*/}
                             <div className="currency-name">{keyName}</div>
@@ -48,7 +52,8 @@ class Rate extends React.Component {
                         </div>
                     ))}
                 </div>
-                <Calculator rate={this.state.currecyRate}/>
+                <Calculator rate={this.state.currecyRate} />
+
             </div>
         )
     }

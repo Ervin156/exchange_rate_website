@@ -14,11 +14,12 @@ class Nav extends React.Component {
                         <nav>
                             <ul>
                             
-                                <li><NavLink to="/">Главная</NavLink></li>
-                                <li><NavLink to="/main">Главная_2</NavLink></li>
+                                <li><NavLink to="/">Курс Доллара</NavLink></li>
+                                <li><NavLink to="/rateUAH">Курс гривны</NavLink></li>
                                 <li><NavLink to="/points">Пункты обмена</NavLink></li>
                                 <li><NavLink to="/photos">Фоточки</NavLink></li>
                                 <li><NavLink to="/contacts">Контакты</NavLink></li>
+                                <li><NavLink to="/weather">Погода</NavLink></li>
 
                             </ul>
                         </nav>
