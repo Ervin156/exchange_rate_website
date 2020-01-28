@@ -1,11 +1,9 @@
 import React from 'react';
 import Rate from './Rate/Rate';
-import './Home.scss';
+import './RateUSD.scss';
 
-class Home extends React.Component {
-    // constructor(props) {
-    //     super(props)
-    // }
+class RateUSD extends React.Component {
+
     render() {
         return (
             <div>
@@ -29,4 +27,4 @@ class Home extends React.Component {
         )
     }
 }
-export default Home;
+export default RateUSD;
