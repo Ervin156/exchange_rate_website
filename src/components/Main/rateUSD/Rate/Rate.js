@@ -1,6 +1,6 @@
 import React from 'react';
 import Calculator from '../Calculator/Calculator';
-import { BASE_URL } from '../../../settings/settings';
+import { BASE_URL_USD } from '../../../settings/settings';
 import Weather from '../../weather/Weather';
 
 import './Rate.scss';
@@ -18,7 +18,7 @@ class Rate extends React.Component {
         this.getRate();
     }
     getRate = () => {
-        const url = BASE_URL;
+        const url = BASE_URL_USD;
 
         fetch(url)
             .then(response => {
@@ -27,20 +27,34 @@ class Rate extends React.Component {
             .then(data => {
                 console.log(data);
                 this.setState({ date: data.date });
+                console.log(this.state.date)
                 let result = {};
                 for (let i in this.currency) {
                     result[this.currency[i]] = data.rates[this.currency[i]]
                 }
                 console.log(result);
                 this.setState({ currecyRate: result })
+                this.createDate(data);
             })
+    }
+    createDate = data => {
+        const { date } = data;
+        const word = date;
+        const arDate = [];
+        for (let i = word.length - 1; i >= 0; i--){
+            arDate.push(date[i])
+            console.log(i)
+
+        }
+        // return arDate;
+        console.log(arDate)
     }
     render() {
         return (
             <div className='rate'>
                 <div className='rate-header'>
                     <h3>Курс валют на {this.state.date} г.</h3>
-                    <Weather/>
+                    <Weather />
                 </div>
                 <div className="flex-container">
                     {Object.keys(this.state.currecyRate).map((keyName) => (
