@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Weather2 from '../weather/Weather2';
 import './Contacts.scss';
 
 class Contacts extends React.Component{
@@ -12,6 +12,7 @@ class Contacts extends React.Component{
         return(
             <div className='contacts'>
                 <h1>Contacts page</h1>
+                <Weather2/>
             </div>
         )
     }
