@@ -25,29 +25,13 @@ class Rate extends React.Component {
                 return response.json();
             })
             .then(data => {
-                console.log(data);
                 this.setState({ date: data.date });
-                console.log(this.state.date)
                 let result = {};
                 for (let i in this.currency) {
                     result[this.currency[i]] = data.rates[this.currency[i]]
                 }
-                console.log(result);
                 this.setState({ currecyRate: result })
-                this.createDate(data);
             })
-    }
-    createDate = data => {
-        const { date } = data;
-        const word = date;
-        const arDate = [];
-        for (let i = word.length - 1; i >= 0; i--){
-            arDate.push(date[i])
-            console.log(i)
-
-        }
-        // return arDate;
-        console.log(arDate)
     }
     render() {
         return (
