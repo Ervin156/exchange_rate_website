@@ -7,7 +7,6 @@ import RateUSD from "../Main/rateUSD/RateUSD";
 import Points from "../Main/exchange_points/Points";
 import Photos from "../Main/photos/Photos";
 import RateUAH from '../Main/rateUAH/RateUAH';
-// import Weather from "../Main/weather/Weather";
 
 
 class Router extends React.Component {
@@ -20,8 +19,6 @@ class Router extends React.Component {
                 <Route path='/contacts' component={Contacts} />
                 <Route path='/photos' component={Photos} />
                 <Route path='/points' component={Points} />
-                {/* <Route path='/weather' component={Weather} /> */}
-
             </Switch >
         )
     }
