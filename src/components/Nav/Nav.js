@@ -3,9 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Nav.scss';
 
 class Nav extends React.Component {
-    // constructor(props){
-    //     super(props)
-    // }
+
     render() {
         return (
             <div className='nav'>
@@ -19,7 +17,6 @@ class Nav extends React.Component {
                                 <li><NavLink to="/points">Пункты обмена</NavLink></li>
                                 <li><NavLink to="/photos">Фоточки</NavLink></li>
                                 <li><NavLink to="/contacts">Контакты</NavLink></li>
-                                <li><NavLink to="/weather">Погода</NavLink></li>
 
                             </ul>
                         </nav>

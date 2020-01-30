@@ -1,8 +1,9 @@
 .header-nav {
-    background: #3b621c;
+    background: #3f8f9b;
     li {
         display: inline-block;
         padding: 15px 25px 15px;
+        transition: all 0.3s ease-in;
         a{
             color: #ffff;
             text-decoration: none;
@@ -10,6 +11,6 @@
         }
     }
     li:hover {
-        background: #487922;
+        background: #53bfcf;
     }
 }

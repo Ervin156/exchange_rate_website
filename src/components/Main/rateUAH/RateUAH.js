@@ -1,4 +1,5 @@
 import React from 'react';
+import { BASE_URL_UAH } from '../../settings/settings';
 
 import './RateUAH.scss';
 
@@ -11,8 +12,8 @@ class RateUAH extends React.Component {
         this.getRequest();
     }
     getRequest = () => {
-        const URL = ' https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5';
-        fetch(URL)
+        const url = BASE_URL_UAH;
+        fetch(url)
             .then(response => {
                 return response.json();
             })
