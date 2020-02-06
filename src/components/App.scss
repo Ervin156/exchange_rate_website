@@ -112,7 +112,9 @@ main,
   main {
     padding: 0;
     h3 {
-      font-size: 2rem;
+      text-align: center;
+
+      font-size: 1.5rem;
     }
     .flex-container {
       display: flex;
@@ -125,7 +127,7 @@ main,
         visibility: visible;
       }
       h3 {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
 
       #full-screen {
