@@ -7,11 +7,11 @@ class RateUSD extends React.Component {
     render() {
         return (
             <div>
-                <div className="container">
-                    <main>
+                {/* <div className="container">
+                    <main> */}
                         <Rate />
-                    </main>
-                </div>
+                    {/* </main>
+                </div> */}
                 <div className="container" id="cookie-info">
                     <div className="site-content">
                         <div className="well">На нашем сайте мы используем cookie для сбора информации технического характера.

@@ -25,22 +25,26 @@
   justify-content: space-between;
 }
 @media (max-width: 828px) {
+  .block {
+    border: none;
+    margin: 0;
+  }
+
   .block .currency-in,
   .block .currency-out {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .currency-name {
     // font-family: 'Oswald';
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
   }
-  p{
+  p {
     font-size: 2rem;
-
   }
-  .rate-header{
+  .rate-header {
     flex-direction: column;
-    h3{
+    h3 {
       text-align: center;
     }
   }

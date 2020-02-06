@@ -41,14 +41,20 @@ class Rate extends React.Component {
                     <Weather />
                 </div>
                 <div className="flex-container">
-                    {Object.keys(this.state.currecyRate).map((keyName) => (
-                        <div className="block flex-item" key={keyName}>
-                            {/* для предотвращения ошибки => "Warning: Each child in a list should have a unique "key" prop" указать уникальный ключ key={keyName}*/}
-                            <div className="currency-name">{keyName}</div>
-                            <div className="currency-in">{this.state.currecyRate[keyName].toFixed(3)} *</div>
-                            <p>* Можно купить за 1 USD</p>
-                        </div>
-                    ))}
+                    <div className='currency-container'>
+                        {Object.keys(this.state.currecyRate).map((keyName) => (
+
+                            <div className="block flex-item" key={keyName}>
+                                {/* для предотвращения ошибки => "Warning: Each child in a list should have a unique "key" prop" указать уникальный ключ key={keyName}*/}
+                                <div className="currency-name">{keyName}</div>
+                                <div className="currency-in">{this.state.currecyRate[keyName].toFixed(3)} *</div>
+                                <p id="full-screen">* Можно купить за 1 USD</p>
+                            </div>
+                        ))}
+                    </div>
+                    <p id="mobile-screen">* Можно купить за 1 USD</p>
+
+
                 </div>
                 <Calculator rate={this.state.currecyRate} />
 

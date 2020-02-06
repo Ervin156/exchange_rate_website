@@ -15,9 +15,9 @@ class Contacts extends Component {
                     <li><a href="https://www.facebook.com/dmitriy.listov.89" target="_blank" rel="noopener noreferrer">Facebook</a></li>
                     <li><a href="https://github.com/Ervin156" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                 </ul>
-                <p> На сайте используются API предоставляемые сервисами
-                    <a href="https://exchangeratesapi.io/">exchangeratesapi.io</a>,
-                    <a href="https://api.privatbank.ua/#p24/exchange">api.privatbank.ua</a>,
+                <p> На сайте используются API предоставляемые сервисами &nbsp;
+                    <a href="https://exchangeratesapi.io/">exchangeratesapi.io</a>,&nbsp;
+                    <a href="https://api.privatbank.ua/#p24/exchange">api.privatbank.ua</a>,&nbsp;
                     <a href="https://unsplash.com/documentation#list-photos">api.unsplash.com</a>
                 </p>
             </div>

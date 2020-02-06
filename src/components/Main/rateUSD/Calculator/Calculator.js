@@ -24,10 +24,10 @@ class Calculator extends React.Component {
             <div className='calculator'>
                 <h3>Калькулятор обмена</h3>
                 <div className="block">
-                    <div>Яхочу</div>
-                    <div>
+                    <h4>Я хочу</h4>
+                    <div className="select-of-calculation-currency"> 
                         <form onSubmit={this.calcRate}>
-                            <input type="number" defaultValue="150" name="count-currency" />
+                            <input type="number" placeholder="Ведите сумму" name="count-currency" />
                             <select name="type-currency" id="">
                                 {Object.keys(this.state.rate).map((keyName, i) => (
                                     <option key={keyName} value={keyName}>{keyName}</option>

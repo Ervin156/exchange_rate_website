@@ -1,7 +1,49 @@
-.calc-res {
+.calculator {
+  .calc-res {
     font-size: 1.2rem;
-}
-
-.calc-res li {
+  }
+  .calc-res li {
     margin: 10px 0;
+  }
+}
+@media (max-width: 828px) {
+  .calculator {
+    h4 {
+      font-size: 2rem;
+    }
+    .select-of-calculation-currency {
+      form {
+        display: flex;
+        justify-content: space-around;
+        input[type="submit"] {
+          padding: 10px;
+          font-size: 2rem;
+          background: rgb(255, 255, 255);
+          border-radius: 5px;
+          border: none;
+          transition: all 0.1s linear;
+        }
+        input[type="number"] {
+          border: none;
+          width: 200px;
+          font-size: 1.5rem;
+          padding: 10px;
+          
+        }
+        // input[placeholder]{
+        //     padding-left: 10px ;
+        // }
+        input[type="submit"]:hover {
+          background: #4cb1c1;
+        }
+        select {
+          font-size: 1.5rem;
+          border: none;
+        }
+      }
+    }
+    .calc-res {
+      font-size: 2rem;
+    }
+  }
 }

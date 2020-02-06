@@ -28,9 +28,7 @@
     transition: 0.5s;
     display: flex;
     justify-content: space-between;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border: none;
     border-radius: 15px;
     i {
       font-size: 12px;
@@ -48,16 +46,18 @@
 }
 @media screen and (max-width: 828px) {
   .weather {
+    margin-bottom: 10px;
     align-self: center;
-    width: 95%;
+    width: 100%;
     position: relative;
+    border: none;
+    border-radius: 0;
     h1{
-      font-size: 30px;
-
+      font-size: 20px;
     }
     li{
       i{
-        font-size: 30px;
+        font-size: 20px;
       }
     }
     img {

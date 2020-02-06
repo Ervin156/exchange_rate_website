@@ -8,8 +8,14 @@ class Main extends React.Component {
     // }
     render() {
         return (
-            <Router />
-        )
-    }
-}
+            <div>
+                <div className="container">
+                    <main>
+                        <Router />
+                    </main>
+                </div>
+                </div>
+                )
+            }
+        }
 export default Main;

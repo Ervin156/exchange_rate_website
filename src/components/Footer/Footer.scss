@@ -3,9 +3,8 @@
     background: #202020;
     padding: 30px 0;
   }
-  p{
+  p {
     text-align: right;
-
   }
   ul li a {
     line-height: 30px;
@@ -39,5 +38,20 @@
       transition: all 0.3s linear;
     }
     padding-left: 50px;
+  }
+}
+@media (max-width: 828px) {
+  .footer {
+    text-align: center;
+    .list-unstyled {
+     
+        padding: 0;
+      a{
+        margin-left: 0;
+      }
+    }
+    p {
+      text-align: center;
+    }
   }
 }
