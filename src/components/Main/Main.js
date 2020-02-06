@@ -14,8 +14,8 @@ class Main extends React.Component {
                         <Router />
                     </main>
                 </div>
-                </div>
-                )
-            }
-        }
+            </div>
+        )
+    }
+}
 export default Main;

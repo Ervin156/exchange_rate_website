@@ -103,9 +103,7 @@ main,
   }
 }
 @media (max-width: 828px) {
-  body, html{
-    // max-width: 828px;
-  }
+ 
   .container{
     max-width: 828px;
   }
@@ -140,7 +138,6 @@ main,
         .flex-item {
           border: none;
           margin: 0;
-          // width: 50%;
           .currency-name {
             text-align: center;
           }
