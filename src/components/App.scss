@@ -103,6 +103,12 @@ main,
   }
 }
 @media (max-width: 828px) {
+  body, html{
+    // max-width: 828px;
+  }
+  .container{
+    max-width: 828px;
+  }
   main {
     padding: 0;
     h3 {
