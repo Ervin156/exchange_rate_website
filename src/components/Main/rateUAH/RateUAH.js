@@ -11,6 +11,7 @@ class RateUAH extends React.Component {
             currecyRate: [],
         }
         this.getRequest();
+
     }
     getRequest = () => {
         const url = BASE_URL_UAH;
@@ -32,6 +33,15 @@ class RateUAH extends React.Component {
         this.setState({ date: current })
     };
     render() {
+        const styles = {
+            block: {
+                display: 'flex',
+                flexWrap: 'wrap',
+            },
+            item: {
+                width: '40%',
+            }
+        }
         return (
             <div className='rate'>
                 <div className='rate-header'>
@@ -39,11 +49,11 @@ class RateUAH extends React.Component {
                 </div>
                 <div className="container">
                     <main>
-                        <div className="flex-container" id="flex-item">
-                            <div className='currency-container'>
+                        <div className="flex-container" id="flex-item" >
+                            <div className='currency-container' style={styles.block}>
                                 {this.state.currecyRate.map(item => {
                                     return (
-                                        <div className='block flex-item' key={item.ccy}>
+                                        <div style={styles.item} className='block flex-item' key={item.ccy}>
                                             <div className="currency-name">{item.ccy}</div>
                                             <div className="currency-buy"><i>Покупка:</i> {Math.round(parseFloat(+item.buy) * 100) / 100}</div>
                                             <div className="currency-sale"><i>Продажа:</i>{Math.round(parseFloat(+item.sale) * 100) / 100}</div>
