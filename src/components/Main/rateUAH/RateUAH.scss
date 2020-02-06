@@ -7,4 +7,10 @@
   display: flex;
   justify-content: space-between;
 }
+@media(max-width:828px){
+  .block .currency-buy,
+  .block .currency-sale {
+    font-size: 3rem;
+  }
+}
 

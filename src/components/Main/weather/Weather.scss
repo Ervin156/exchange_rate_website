@@ -46,3 +46,27 @@
     color: #8a6aff;
   }
 }
+@media screen and (max-width: 828px) {
+  .weather {
+    align-self: center;
+    width: 95%;
+    position: relative;
+    h1{
+      font-size: 30px;
+
+    }
+    li{
+      i{
+        font-size: 30px;
+      }
+    }
+    img {
+      position: absolute;
+      // -webkit-transition: all 1s ease-out;
+      height: 150px;
+      width: 150px;
+      left: 350px;
+      top: 100px;
+    }
+  }
+}

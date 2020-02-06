@@ -1,28 +1,47 @@
 .block {
-    position: relative;
-    padding: 20px 15px 20px 20px;
-    border: 1px solid #747474;
-    border-top: 1px solid #487922;
-    background: #ededed;
-    margin: 20px;
+  position: relative;
+  padding: 20px 15px 20px 20px;
+  border: 1px solid #747474;
+  border-top: 1px solid #487922;
+  background: #ededed;
+  margin: 20px;
 }
-
 .block div {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-
 .block .currency-in,
 .block .currency-out {
-    font-size: 1.3rem;
-    text-align: right;
+  font-size: 1.3rem;
+  text-align: right;
 }
 
 .currency-name {
-    // font-family: 'Oswald';
-    font-size: 1.3rem;
-    font-weight: bold;
+  // font-family: 'Oswald';
+  font-size: 1.3rem;
+  font-weight: bold;
 }
-.rate-header{
-    display: flex;
-    justify-content: space-between;
+.rate-header {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 828px) {
+  .block .currency-in,
+  .block .currency-out {
+    font-size: 3rem;
+  }
+  .currency-name {
+    // font-family: 'Oswald';
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  p{
+    font-size: 2rem;
+
+  }
+  .rate-header{
+    flex-direction: column;
+    h3{
+      text-align: center;
+    }
+  }
 }

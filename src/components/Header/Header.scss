@@ -6,6 +6,15 @@ header {
   }
 
   .site-title {
+    margin-left: 20px;
     color: #ffff;
+  }
+  @media screen and (max-width:828px){
+    .main-header {
+      text-align: center;
+      .site-title{
+        font-size: 4rem;
+      }
+    }
   }
 }
