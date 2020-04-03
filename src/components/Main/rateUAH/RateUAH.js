@@ -22,6 +22,7 @@ class RateUAH extends React.Component {
             .then(data => {
                 this.setState({ currecyRate: data });
                 this.currentDate()
+                console.log(data);
             })
     }
     currentDate = () => {
@@ -30,6 +31,7 @@ class RateUAH extends React.Component {
         const month = date.getMonth();
         const day = date.getDay();
         const current = `${day}.${month}.${year}`;
+        console.log(current);
         this.setState({ date: current })
     };
     render() {
