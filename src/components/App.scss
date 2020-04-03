@@ -82,11 +82,14 @@ main,
   background-color: #ffff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
   padding: 30px 20px;
+
   #mobile-screen {
     visibility: hidden;
   }
+
   .currency-container {
     display: flex;
+
     .flex-container {
       display: flex;
       flex-direction: row;
@@ -95,6 +98,7 @@ main,
       align-content: stretch;
       align-items: flex-start;
     }
+
     .flex-item {
       order: 0;
       flex: 1 1 auto;
@@ -102,28 +106,37 @@ main,
     }
   }
 }
+
 @media (max-width: 828px) {
- 
-  .container{
+
+  .container {
     max-width: 828px;
   }
+
   main {
+
+    background: #f3f3f3;
+
     padding: 0;
+
     h3 {
       text-align: center;
 
       font-size: 1.5rem;
     }
+
     .flex-container {
       display: flex;
       flex-direction: column;
       margin-top: 20px;
       background: #ededed;
+
       #mobile-screen {
         margin: 20px auto;
         // text-align: center;
         visibility: visible;
       }
+
       h3 {
         font-size: 1.5rem;
       }
@@ -131,13 +144,16 @@ main,
       #full-screen {
         display: none;
       }
+
       .currency-container {
         width: 100%;
         display: flex;
         justify-content: space-between;
+
         .flex-item {
           border: none;
           margin: 0;
+
           .currency-name {
             text-align: center;
           }
